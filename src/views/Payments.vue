@@ -1,6 +1,9 @@
 <template>
   <div class="body">
     <van-nav-bar title="生活缴费" left-arrow @click-left="onClickLeft"/>
+    <div class="history" @click="changeUrl">
+      <van-icon name="underway-o" />
+      </div>
     <div class="banner">
       <img src="../assets/img/payments/bannerimg.png" alt="">
     </div>
@@ -28,7 +31,14 @@
 
 <script>
 export default {
-  
+  methods: {
+    onClickLeft() {
+      alert('返回');
+    },
+    changeUrl() {
+      alert('history')
+    }
+  }
 }
 </script>
 
@@ -59,6 +69,12 @@ h2{
 .van-icon-arrow-left {
   color: #444;
   font-size: 34px;
+}
+.history {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 2;
 }
 .banner {
   background-color: #beeef7;
@@ -101,7 +117,7 @@ h2{
   color: #3d0e1e;
 }
 button {
-  background-color: #444;
+  background-color: #111;
   border: none;
   border-radius: 8px;
   color: #fff4e4;
