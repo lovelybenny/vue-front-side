@@ -11,6 +11,7 @@ import { Button } from 'vant';
 import { Cell, CellGroup } from 'vant';
 import { Search } from 'vant';
 import { Grid, GridItem } from 'vant';
+import { Tab, Tabs } from 'vant';
 
 Vue.use(VueRouter);
 Vue.use(Row).use(Col);
@@ -22,6 +23,8 @@ Vue.use(Button);
 Vue.use(Cell).use(CellGroup);
 Vue.use(Search);
 Vue.use(Grid).use(GridItem);
+Vue.use(Tab).use(Tabs);
+
 
 const routes = [
   {
@@ -45,11 +48,6 @@ const routes = [
     component: () => import('../views/ChangeNumber.vue')
   },
   {
-    path: '/test',
-    name: 'test',
-    component: () => import('../views/test.vue')
-  },
-  {
     path: '/encyclopedia',
     name: 'encyclopdia',
     component: () => import('../views/Encyclopedia.vue')
@@ -58,6 +56,21 @@ const routes = [
     path: '/payments',
     name: 'payments',
     component: () => import('../views/Payments.vue')
+  },
+  {
+    path: '/paymentsdetails',
+    name: 'paymentsdetails',
+    component: () => import('../views/PaymentsDetails.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/Login.vue')
+  },
+  {
+    path: '/orderdetails',
+    name: 'orderdetails',
+    component: () => import('../views/OrderDetails.vue')
   }
 ]
 

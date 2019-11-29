@@ -30,6 +30,7 @@
             v-model="sms"
             center
             label="验证码"
+            label-width='2rem'
             placeholder="请输入短信验证码"
           >
             <van-button slot="button" size="small" type="primary">发送验证码</van-button>
@@ -117,7 +118,7 @@ export default {
 }
 .btn-box{
   text-align: center;
-    margin-top: 150px;
+  margin-top: 150px;
 }
 .confrim {
 
